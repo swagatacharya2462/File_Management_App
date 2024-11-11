@@ -1,5 +1,6 @@
 import os
 
+
 def create_file(fileName):
     """Create a new file with the specified name."""
     try:
@@ -8,7 +9,8 @@ def create_file(fileName):
     except FileExistsError:
         print(f"File '{fileName}' already exists!")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An error occurred while creating the file: {e}")
+
 
 def view_all_files():
     """Display all files in the current directory."""
@@ -20,6 +22,7 @@ def view_all_files():
         for file in files:
             print(file)
 
+
 def delete_file(fileName):
     """Delete the specified file."""
     try:
@@ -28,7 +31,8 @@ def delete_file(fileName):
     except FileNotFoundError:
         print(f"File '{fileName}' not found.")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An error occurred while deleting the file: {e}")
+
 
 def read_file(fileName):
     """Read and display the content of the specified file."""
@@ -39,7 +43,8 @@ def read_file(fileName):
     except FileNotFoundError:
         print(f"File '{fileName}' doesn't exist.")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An error occurred while reading the file: {e}")
+
 
 def edit_file(fileName):
     """Append content to the specified file."""
@@ -51,17 +56,18 @@ def edit_file(fileName):
     except FileNotFoundError:
         print(f"File '{fileName}' doesn't exist.")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An error occurred while editing the file: {e}")
+
 
 def main():
     """Main function to run the file management app."""
     while True:
         print("\nFILE MANAGEMENT APP")
-        print("1: Create file")
+        print("1: Create a file")
         print("2: View all files")
-        print("3: Delete file")
-        print("4: Read file")
-        print("5: Edit file")
+        print("3: Delete a file")
+        print("4: Read a file")
+        print("5: Edit a file")
         print("6: Exit")
 
         choice = input("Enter your choice (1-6): ")
@@ -84,6 +90,7 @@ def main():
             break
         else:
             print("Invalid choice! Please enter a number between 1 and 6.")
+
 
 if __name__ == "__main__":
     main()
